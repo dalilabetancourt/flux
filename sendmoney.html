@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sendmoney</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="css/style.css">
+
+  </head>
+<body>
+<div id="logo" class="mb-4 ps-3">
+  <img src="image/FLUX_Logo.png" alt="logo" width="120">
+</div>
+
+   <nav  id="sendmoney" class="container">
+     <h2>Transferir</h2>
+<form>
+  
+  <label>¿Aquién le quieres transferir?</label>
+   <input type="text" placeholder="Busca por nombres o alias"  class="form-control">
+
+   
+   <button type="submit"  id="btn-contact" class="btn w-100 mt-3">Buscar</button>
+    
+
+   
+   <button type="button"  class="btn  w-100 mt-3" data-bs-toggle ="modal"
+    data-bs-target="#modalContacto">
+    Agregar nuevo Contacto</button>
+
+
+     <h3 class="mt-4">Contactos </h3>
+
+     <ul id="contactolist" class="list-group" >
+
+      <li class="list-group-item">
+       Carolina Solorzano CUB:2222222222 | Alias Carolina | Banco: ASS Banco
+      </li>
+
+      <li class="list-group-item"> 
+        Ricardo Montalva CUB 33333333333 | Alias: Rick Banco | GTB Banco
+      </li>
+
+     </ul>
+
+    <a href="menu.html" class="btn  w-100 mt-3">Volver al Menú Principal</a>
+  
+  </form>
+  </nav>
+
+  <div class="modal fade" id="modalContacto" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Nuevo Contacto</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal">
+        </button>
+      </div>
+
+      <form id="formTransaccion" class="needs-validation form-control" novalidate>
+
+  
+  <div class="mb-3">
+    <label for="nombreApellido" class="form-label">Nombre y apellido</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nombreApellido"
+      required
+    >
+    <div class="invalid-feedback">
+      Ingresa nombre y apellido.
+    </div>
+  </div>
+
+
+  <div class="mb-3">
+    <label for="cbu" class="form-label">Numero de CBU</label>
+    <input
+      type="text"
+      class="form-control"
+      id="cbu"
+      pattern="[0-9]{10}"
+      required
+    >
+    <div class="invalid-feedback">
+      El CBU debe contener 10 digitos numericos.
+    </div>
+  </div>
+
+ 
+  <div class="mb-3">
+    <label for="alias" class="form-label">Alias</label>
+    <input
+      type="text"
+      class="form-control"
+      id="alias"
+      required
+    >
+    <div class="invalid-feedback">
+      Ingresa el alias.
+    </div>
+  </div>
+
+ 
+  <div class="mb-3">
+    <label for="banco" class="form-label">Nombre del banco</label>
+    <input
+      type="text"
+      class="form-control"
+      id="banco"
+      required
+    >
+    <div class="invalid-feedback">
+      Ingresa el nombre del banco.
+    </div>
+  </div>
+
+
+  <button id="btnGdatos" type="submit" class="btn btn-primary w-100">
+    Guardar datos
+  </button>
+
+</form>
+  
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="app/billetera.js"></script>
+  </body>
+</html>
